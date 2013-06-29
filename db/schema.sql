@@ -48,6 +48,7 @@ DROP TABLE IF EXISTS `training`;
 CREATE TABLE training(
     id              int unsigned    NOT NULL auto_increment,
     job_id          int unsigned    NOT NULL DEFAULT 0,
+    order           int unsigned    NOT NULL DEFAULT 0,
     training_type   tinyint(1)      NOT NULL DEFAULT 0, -- 1 => text, 2 => img, 3 => video
     name            varchar(255)    NOT NULL DEFAULT '',
     description     text            NOT NULL DEFAULT '',
