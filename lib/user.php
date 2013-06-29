@@ -28,7 +28,7 @@
         return $res;
     }
 
-    function user_register_api($user_email, $user_password, $user_password2) {
+    function user_register_api($user_email, $user_password, $user_password2,$user_nickname) {
         global $_db;
         $res = array(result => "", errCode => 0, errMsg => "");
 
@@ -41,7 +41,8 @@
         list($user_info, $mysql_err_no, $mysql_err_msg) = $_db->insert_user(
             array(
                 email    => $user_email,
-                password => $user_password
+                password => $user_password,
+                nick_name =>$user_nickname
             )
         );
         validate_db_error($mysql_err_no, $mysql_err_msg, $res);

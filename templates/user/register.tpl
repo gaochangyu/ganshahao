@@ -20,6 +20,9 @@
                                         <input type="text"  class="login" id="user_email" name="user_email" style="width:295.59px" placeholder="你的电子邮件地址" />
                                     </div><div style="height:5px"></div>
                                     <div class="field">
+                                        <input type="text"  class="login" id="user_nickname" name="user_nickname" style="width:295.59px" placeholder="真实姓名" />
+                                    </div><div style="height:5px"></div>
+                                    <div class="field">                                    
                                         <input type="password" class="login" id="user_password" name="user_password" style="width:295.59px" placeholder="注册密码"/>
                                     </div><div style="height:5px"></div>
                                     <div class="field">
@@ -67,6 +70,7 @@
                 var user_email = $("#user_email").val();
                 var user_password = $("#user_password").val();
                 var user_password2 = $("#user_password2").val();
+                var user_nickname = $("#user_nickname").val();
                 if(user_email < 1){
                     toast_info("请输入您的邮箱");
                     return;
@@ -79,6 +83,10 @@
                     toast_info("请输入您的确认密码");
                     return;
                 }
+                if(user_nickname < 1){
+                    toast_info("请输入您的真实姓名");
+                    return;
+                }
 
                 $.ajax({
                     type:	"POST",
@@ -87,6 +95,7 @@
                         user_email     : user_email,
                         user_password  : user_password,
                         user_password2 : user_password2,
+                        user_nickname  : user_nickname,
                         submit         : 1,
                     },
                     dataType: "json",

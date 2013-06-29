@@ -13,8 +13,9 @@
         $user_email = $_POST['user_email'];
         $user_password = $_POST['user_password'];
         $user_password2 = $_POST['user_password2'];
+        $user_nickname = $_POST['user_nickname'];
 
-        $res = user_register_api($user_email, $user_password, $user_password2);
+        $res = user_register_api($user_email, $user_password, $user_password2,$user_nickname);
         if($res['errCode'] != 0) {
             $res[user_email] = $user_email;
             json_exit($res);
