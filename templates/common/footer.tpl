@@ -6,12 +6,12 @@
             <a href=""><img src="/static/img/tencent.jpg" width="154px" /></a>
             <a href=""><img src="/static/img/renren.jpg" width="154px" /></a>
         </div>
-        <div style="text-align:center;">
+        <div style="text-align:center; display:none;">
         <a href=""><span style="font-size:14px; color:#666; text-decoration:none;">关于我们</span></a> &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp <a href=""><span style="font-size:14px; color:#666; text-decoration:none;">联系我们</span></a> &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp <a href=""><span style="font-size:14px; color:#666; text-decoration:none;">加入我们</span></a> &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp <a href=""><span style="font-size:14px; color:#666; text-decoration:none;">营销服务</span></a> &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp <a href=""><span style="font-size:14px; color:#666; text-decoration:none;">招贤纳士</span></a> &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp <a href=""><span style="font-size:14px; color:#666; text-decoration:none;">友情链接</span></a>
         </div>
     </div>
-    <div class="subfooter">
-    	<div class="container" style="text-align:right;">subfooter text</div>
+    <div class="subfooter" style="top:38px;">
+    	<div class="container" style="text-align:right;">© 2013 Ganshahao. All rights reserved.</div>
     </div>
 </div>
 <script src="/static/js/jquery-2.0.0.min.js"></script>

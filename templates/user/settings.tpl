@@ -31,7 +31,7 @@
                             <div class="row">
                                 <div class="columns two">
                                     <div class="user-icon large">
-                                    <img alt="Default-user-icon" src="/uploads/{$user.picture}" width="150" height="150">
+                                    <img alt="Default-user-icon" src="/uploads/{$user.picture}">
                                     </div>
                                 </div>
                                 <div class="columns six">
@@ -75,17 +75,17 @@
                             <div class="profile-resume-file-field" style="float:left;">
                                 <form action="settings.php" enctype="multipart/form-data" method="post">
                                     <input type="hidden" name="MAX_FILE_SIZE" value="4000000">
-                                    <br><input id="user_resume" style="border:0; padding-left:10px;" id="resume" name="user_resume" type="file" accept="application/msword"><br>最大4M，只支持pdf和doc格式<br/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </label>
+                                    <br><input id="user_resume" style="border:0; padding-left:10px;" id="resume" name="user_resume" type="file" accept="application/msword"><input type="submit" class="buttonsmall" value="上传" /><a href="/uploads/{$user.resume nofilter}"> &nbsp <span class="buttonsmall" style="height:30px; line-height:30px; padding:4px 15px 4px 15px;">下载简历</span></a><br>最大4M，只支持pdf和doc格式<br/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </label>
                                     <label>{$user_resume_error}</label>
-                                    <br><input type="submit" class="buttonsmall" value="上传" />
+                                    
                                 </form>
-                                <a href="/uploads/{$user.resume nofilter}">下载简历</a>
-                                <br><br>
+                                
+                                
                                 <input id="user_is_veteran" name="user_is_veteran" type="checkbox" value="{$user.is_veteran}"
                                 {if $user.is_veteran}
                                     checked
                                 {/if} style="width:2em;float:none"/><span style="left:45px; -moz-box-shadow: 2px 2px 22px #eee inset; -webkit-box-shadow: 2px 2px 22px #eee inset; box-shadow:  2px 2px 22px #eee inset;"></span>
-                                <label for="user_is_veteran" style="left:80px; font-size:18px;">我是有经验的老手</label>
+                                <label for="user_is_veteran" style="left:80px; font-size:14px;">我是有经验的老手</label>
                             </div>
                             <div style="clear:both;"></div>
                         </li>

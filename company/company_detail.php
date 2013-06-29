@@ -4,8 +4,6 @@
     require_once "$_SERVER[DOCUMENT_ROOT]/lib/MySmarty.php";
     define('COMPANY_DETAIL_TPL', 'company/company_detail.tpl');
 
-    require_login();
-
     if ( !isset($_REQUEST['company_id']) ) {
         echo "ERROR: without company_id";
         exit;

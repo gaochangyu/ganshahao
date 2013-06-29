@@ -3,8 +3,6 @@
     require_once "$_SERVER[DOCUMENT_ROOT]/lib/common.php";
     require_once "$_SERVER[DOCUMENT_ROOT]/lib/MySmarty.php";
 
-    require_login();
-	
 	$job_id = $_REQUEST['job_id'];
 	$training_list = try_get_training_list($job_id);
 	

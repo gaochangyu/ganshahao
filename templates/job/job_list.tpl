@@ -13,10 +13,6 @@
 <div class="container">
 	<div class="joblisttitle">
     <div style="float:left; ">卢湾区 淮海路</div><div style="float:left; margin:15px 0 0 20px; cursor:pointer;" class="buttonsmall"  onClick="loginexpand()">更改地点</div>
-					
-					
-					
-				
     </div>
     {include file='job/job_list_div.tpl'}
     <div style="clear:both; height:30px;"></div>

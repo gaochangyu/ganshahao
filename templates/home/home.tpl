@@ -13,7 +13,7 @@
         {include file="common/header.tpl"}
         <section>
 <div class="stepscon">
-	<div style="position:absolute; top:-70px; height:70px; color:white; font-size:42px; line-height:70px; -moz-text-shadow: 1px 1px 5px #333; -webkit-text-shadow: 1px 1px 5px #333; text-shadow: 1px 1px 5px #333;">找到适合你的兼职</div>
+	<div style="position:absolute; top:-70px; height:70px; color:white; font-size:42px; line-height:70px; -moz-text-shadow: 1px 1px 5px #333; -webkit-text-shadow: 1px 1px 5px #333; text-shadow: 1px 1px 5px #333;">找到适合你的工作</div>
 	<div class="stepsblock">
 		<span class="circlespan">&nbsp1 </span>&nbsp 搜索职位
     </div>
