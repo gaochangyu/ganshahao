@@ -185,7 +185,7 @@ class DbAdapter {
     }
 
     public function select_company_list_by_zipcode($zipcode) {
-        $zipcode = $this->escape($zipcode);
+        //$zipcode = $this->escape($zipcode);
         $sql = "SELECT
                     DISTINCT company.id as company_id,
                     company.name as company_name,
@@ -195,7 +195,7 @@ class DbAdapter {
                 WHERE
                     job.company_id = company.id
                         AND
-                    job.zipcode = {$zipcode}";
+                    job.zipcode = '{$zipcode}'";
         return $this->getData($sql);
     }
 
@@ -211,7 +211,7 @@ class DbAdapter {
                 WHERE
                     company_id = {$company_id}
                         AND
-                    zipcode = {$zipcode}";
+                    zipcode = '{$zipcode}'";
         return $this->getData($sql);
     }
 
