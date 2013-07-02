@@ -9,6 +9,17 @@ var scores_map = new HashMap();
 				});
 			});
 		})(jQuery);
+        
+function selectOne(obj){ 
+     var objCheckBox = $(".checkbox"); 
+     for(var i=0;i<objCheckBox.length;i++){ 
+         if (objCheckBox[i]!=obj) { 
+             objCheckBox[i].checked = false; 
+         } else{
+             objCheckBox[i].checked = true; 
+         } 
+     } 
+    } 
 
 $(function() {
 /*     $("#job_apply_btn").click(function(e) {
@@ -70,10 +81,12 @@ function check_real_info_setted() {
 }
 
 function count_score() {
-    var elements = $(":radio");
+    var elements = $(".checkbox");
+    //console.log(elements);
     for(var i=0; i<elements.length; i++) {
         if(elements[i].checked) {
             check(elements[i].name, elements[i].value);
+            //console.log(elements[i].name, elements[i].value);
         }
     }
     catch_score();
@@ -82,9 +95,11 @@ function count_score() {
 function catch_score() {
     var training_id = $("#training_id").val();
     var training_name = $("#training_name").val();
+    //console.log(training_name); 
     var training_obj = new Object();
     training_obj.name = training_name;
     training_obj.score = score;
+    //console.log(training_obj.score);
     scores_map.put(training_id, training_obj);
     console.log('---->>>>put: ' + training_id + training_obj + " :size " + scores_map.size());
 }
@@ -187,6 +202,7 @@ function save_job_apply() {
 }
 
 function check(question_id, current_answer) {
+    //console.log("fuck");
     console.log(question_id + ':' + current_answer);
     $.ajax({
         type :	"POST",
@@ -212,13 +228,13 @@ function check(question_id, current_answer) {
 
 function handle_response(question_id, correct_answer) {
     var elements = document.getElementsByName(question_id);
-    for(var i=0; i<elements.length; i++) {
-        if(correct_answer == elements[i].value) {
-            if(elements[i].checked) {
+    //console.log(elements.length);
+    for(var i=0;i<elements.length;i=i+1) {
+        if((correct_answer == elements[i].value)&&(elements[i].checked)){
                 score += 10;
+                //console.log(i+"right!"+elements[i].value+correct_answer);
             }
             //document.getElementById(question_id+correct_answer).style.color = "red";
-        }
         elements[i].disabled=true;
     }
 }

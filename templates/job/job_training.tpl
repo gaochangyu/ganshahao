@@ -34,7 +34,7 @@
             	
                 {foreach $question.choices as $choice}
             	<li>
-                	<span class="input"></span><input type="checkbox" name="{$question.id}" id="{$question.id}{$choice@iteration}" value="{$choice@iteration}"/><span class="input"></span><label for="{$question.id}{$choice@iteration}" id="{$question.id}{$choice@iteration}">{$choice}</label>
+                	<span class="input"></span><input onclick="selectOne(this)" class="checkbox" type="checkbox" name="{$question.id}" id="{$question.id}{$choice@iteration}" value="{$choice@iteration}"/><span class="input"></span><label for="{$question.id}{$choice@iteration}" id="{$question.id}{$choice@iteration}">{$choice}</label>
                 </li>
                 {/foreach}
             </div>
@@ -57,3 +57,5 @@
 			});
 		})(jQuery);
 	</script>
+    
+

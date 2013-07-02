@@ -71,6 +71,7 @@
 			});
 		})(jQuery);
 	</script>
+
     <script type="text/javascript" src="/static/js/loginexpand.js"></script>
     <script type="text/javascript" src="/static/js/jobdetaildisp.js"></script>
 </body>
