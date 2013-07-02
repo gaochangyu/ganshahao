@@ -28,5 +28,15 @@
                     training
                 WHERE
                     id = {$id}";
-        print_r( $_db->getLine($sql));
+        //print_r( $_db->getLine($sql));
+        
+        $id  = 1;
+        $data = 1;
+        $sql = "update
+                    job_application
+                SET
+                    status = {$data}
+                WHERE
+                    id = {$id}";
+        $_db->runSql($sql);
 ?>

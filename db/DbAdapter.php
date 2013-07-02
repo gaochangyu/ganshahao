@@ -491,7 +491,7 @@ class DbAdapter {
         $sql = "update
                     job_application
                 SET
-                    {$data}
+                    status = {$data}
                 WHERE
                     id = {$id}";
         return $this->runSql($sql);
