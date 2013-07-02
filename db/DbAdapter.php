@@ -271,11 +271,13 @@ class DbAdapter {
         $id = $this->escape($id);
         $sql = "SELECT
                     id as id,
-                    name as name
-                FROM
+                    name as name,
+                    description as description,
+                    training_order as training_order
+                    FROM
                     training
                 WHERE
-                    job_id = {$id}";
+                job_id = {$id}";
         return $this->getData($sql);
     }
 

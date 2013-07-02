@@ -54,11 +54,14 @@
                 $question[choices] = json_decode($question[choices]);
             }
         }
-
+        #获得training的list
+        $training_list = get_training_list_api($job_id);
+        
         $smarty = new MySmarty();
         $smarty->assign('training', $training);
         $smarty->assign('training_number', $training_number);
         $smarty->assign('question_list', $question_list);
+        $smarty->assign('training_list',$training_list);
         @$smarty->display(JOB_TRAINING_TPL);
     }
 	

@@ -14,7 +14,19 @@
                     job.company_id = company.id
                         AND
                     job.zipcode = 'asd'";
-    print_r($_db->getData($sql));
+    //print_r($_db->getData($sql));
     
-    
+        $id = 1;
+        $sql = "SELECT
+                    id as id,
+                    training_type as type,
+                    name as name,
+                    description as description,
+                    link as link,
+                    training_order as traing_order
+                FROM
+                    training
+                WHERE
+                    id = {$id}";
+        print_r( $_db->getLine($sql));
 ?>
