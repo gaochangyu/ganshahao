@@ -38,5 +38,19 @@
                     status = {$data}
                 WHERE
                     id = {$id}";
-        $_db->runSql($sql);
+        //$_db->runSql($sql);
+        
+           $sql = "SELECT
+                    DISTINCT company.id as company_id,
+                    company.name as company_name,
+                    company.logo as company_logo,
+                    job.district as job_district,
+                    job.zipcode  as job_zipcode
+                FROM
+                    job, company
+                WHERE
+                    job.company_id = company.id
+                        AND
+                    job.zipcode = '武东路'";
+        print_r( $_db->getData($sql));
 ?>

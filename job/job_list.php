@@ -17,7 +17,6 @@
     function try_get_job_list($zipcode) {
         $res = get_job_list_by_zipcode_api($zipcode);
         if($res['errCode'] != 0) json_exit($res);
-
         show_page($res[result], "job/job_list.tpl");
     }
 
@@ -31,6 +30,6 @@
     function show_page($company_list, $tpl){
         $smarty = new MySmarty();
         $smarty->assign('company_list', $company_list);
-        @$smarty->display($tpl);
+        $smarty->display($tpl);
     }
 ?>

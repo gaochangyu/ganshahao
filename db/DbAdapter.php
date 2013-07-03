@@ -189,7 +189,9 @@ class DbAdapter {
         $sql = "SELECT
                     DISTINCT company.id as company_id,
                     company.name as company_name,
-                    company.logo as company_logo
+                    company.logo as company_logo,
+                    job.district as job_district,
+                    job.zipcode  as job_zipcode
                 FROM
                     job, company
                 WHERE
