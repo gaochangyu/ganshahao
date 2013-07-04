@@ -3,7 +3,8 @@
 	<div class="navbg">
     <div class="container">
     	<a href="/home.php"><div class="navbutLogo"><img src="/static/img/favicon.png" height="90px"></div></a>
-        <a href="/job/job_list.php"><div class="navbutL">工作列表</div></a>
+        <!--a href="/job/job_list.php"><div class="navbutL">工作列表</div></a-->
+        <div class="navbutL" onclick = "loginexpand()">工作列表</div>
         <a href="/company/company_profile.php"><div class="navbutL">我要雇人</div></a>
         <a href=""><div class="navbutL">了解我们</div></a>
         {if is_login() neq false}
@@ -15,3 +16,4 @@
     </div>
     </div>
 </div>
+<script type="text/javascript" src="/static/js/loginexpand.js"></script>

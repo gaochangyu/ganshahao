@@ -557,7 +557,10 @@ class DbAdapter {
                         AND
                     job_application.job_id = job.id
                         AND
-                    job.company_id = company.id";
+                    job.company_id = company.id
+                ORDER BY
+                    job_application.updated_time
+                DESC";
         return $this->getData($sql);
     }
     ##################
