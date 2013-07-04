@@ -11,7 +11,7 @@ var scores_map = new HashMap();
 		})(jQuery);
         
 function selectOne(obj){ 
-     var objCheckBox = $(".checkbox"); 
+     var objCheckBox = document.getElementsByName(obj.name); 
      for(var i=0;i<objCheckBox.length;i++){ 
          if (objCheckBox[i]!=obj) { 
              objCheckBox[i].checked = false; 

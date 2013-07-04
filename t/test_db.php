@@ -52,5 +52,21 @@
                     job.company_id = company.id
                         AND
                     job.zipcode = '武东路'";
-        print_r( $_db->getData($sql));
+        //print_r( $_db->getData($sql));
+        
+        $id = 2;
+        $sql = "SELECT
+                    training.name as training_name,
+                    training.job_id as job_id,
+                    training_completed.score as score,
+                    count(DISTINCT training.id)
+                FROM
+                    training, training_completed
+                WHERE
+                    training_completed.user_id = {$id}
+                        AND
+                    training_completed.training_id = training.id 
+                GROUP By
+                    training.id";
+        print_r($_db->getData($sql));
 ?>

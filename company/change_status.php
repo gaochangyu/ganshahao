@@ -20,7 +20,7 @@ $job_application_id = $_POST['job_application_id'];
 #var_dump($job_application_id);
 
 $_db = new DbAdapter();
-list($affected_rows, $mysql_err_no, $mysql_err_msg) = $_db->update_job_application_by_id($job_application_id, array('status' => $status_selected));
+list($affected_rows, $mysql_err_no, $mysql_err_msg) = $_db->update_job_application_by_id($job_application_id, $status_selected);
 validate_db_error($mysql_err_no, $mysql_err_msg, $res);
 if ($res[errCode]) json_exit($res);
 

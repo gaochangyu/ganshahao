@@ -33,6 +33,8 @@ list($training_names, $mysql_err_no, $mysql_err_msg)
 validate_db_error($mysql_err_no, $mysql_err_msg, $res);
 if ($res['errCode']) json_exit($res);
 
+
+
 list($application_list, $mysql_err_no, $mysql_err_msg)
     = $_db->select_job_applications_by_user_id($user_id);
 validate_db_error($mysql_err_no, $mysql_err_msg, $res);

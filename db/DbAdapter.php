@@ -350,7 +350,7 @@ class DbAdapter {
                     FROM
                         job
                     WHERE
-                        zipcode = $zipcode)
+                        zipcode = '$zipcode')
                 GROUP BY
                     job_id
                 ORDER BY
@@ -454,7 +454,7 @@ class DbAdapter {
     public function count_training_completed_by_user_id($id) {
         $id = $this->escape($id);
         $sql = "SELECT
-                    count(*)
+                    count(DISTINCT training_id)
                 FROM
                     training_completed
                 WHERE
@@ -465,13 +465,20 @@ class DbAdapter {
     public function select_training_names_completed_by_user_id($id) {
         $id = $this->escape($id);
         $sql = "SELECT
-                    training.name as training_name
+                    training.name as training_name,
+                    training.job_id as job_id,
+                    training_completed.score as score,
+                    count(DISTINCT training.id)
                 FROM
                     training, training_completed
                 WHERE
                     training_completed.user_id = {$id}
                         AND
-                    training_completed.training_id = training.id ";
+                    training_completed.training_id = training.id 
+                GROUP By
+                    training.id
+                ORDER BY
+                    training_completed.updated_time";
         return $this->getData($sql);
     }
 
@@ -489,7 +496,8 @@ class DbAdapter {
 
     public function update_job_application_by_id($id, $params) {
         $id  = $this->escape($id);
-        $data = $this->format_data($params);
+        //$data = $this->format_data($params);
+        $data = $params;
         $sql = "update
                     job_application
                 SET
