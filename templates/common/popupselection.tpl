@@ -146,7 +146,7 @@
         <div class="popupsubobj">凉城/江湾镇<input type="submit" class="popupsubobjsubmit" name="submit" value="200000" /></div>
     </div>
     <div class="popuprightcol" id="popuprightcol11" onmousemove="move11()" onmouseout="hideall()" style="display:none;">
-    	<a href="/job/job_list.php?zipcode=五角场/大学区">"<div class="popupsubobj">五角场/大学区<input type="submit" class="popupsubobjsubmit" name="submit" value="200000" /></div></a>
+    	<a href="/job/job_list.php?zipcode=五角场/大学区">"<div class="popupsubobj"s>五角场/大学区<input type="submit" class="popupsubobjsubmit" name="submit" value="200000" /></div></a>
         <div class="popupsubobj">控江地区<input type="submit" class="popupsubobjsubmit" name="submit" value="200000" /></div>
         <div class="popupsubobj">中原地区<input type="submit" class="popupsubobjsubmit" name="submit" value="200000" /></div>
         <div class="popupsubobj">黄兴公园<input type="submit" class="popupsubobjsubmit" name="submit" value="200000" /></div>
