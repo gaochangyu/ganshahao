@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/jquery.mCustomScrollbar.css" type="text/css" />
 	<link rel="icon" type="/image/ico" href="favicon.ico">
 </head>
-<body id="employer-profile" lang="en" onLoad="get_training_list()">
+<body id="employer-profile" lang="en">
 	{include file="common/headersec.tpl"}
 	<section>
 <div class="container" style="padding-top:40px;">
@@ -21,7 +21,21 @@
         <input class="jobinfobut" id="apply_btn" name="apply_btn" type="button" value="现在申请" onclick="jobdetaildisp()" />
     </div></div>
     <!-- jobinfo item -->
-    <div id="training_list"></div>
+    <div id="training_list">
+        <div style="height:10px;"></div>
+        <div class="trainingprogblock">
+    		<div class="trainingprogcon0" style="background:#aaa; color:#fff;">
+    			本职位的培训列表
+    		</div>
+        </div>
+        {foreach $training_list as $training}
+            <div class="trainingprogblock">
+    		<div class="trainingprogcon0">
+    			{$training.name}
+    		</div>
+            </div>
+        {/foreach}
+</div>
     
 </div>
 <div class="rightcol">

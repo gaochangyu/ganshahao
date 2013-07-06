@@ -27,20 +27,24 @@
     function try_get_job_detail($job_id) {
         $res = get_job_detail_api($job_id);
         if($res['errCode'] != 0) json_exit($res);
+        
+        $training_list = get_training_list_api($job_id);
+        if($training_list['errCode'] != 0) json_exit($res);
 
-        show_detail_page($res[result]);
+        show_detail_page($res[result],$training_list[result]);
     }
 
     function try_get_job_trainings($job_id, $training_number) {
         $res = get_job_trainings_api($job_id, $training_number++);
         if($res['errCode'] != 0) json_exit($res);
-
+        
         show_training_page($res[result], $training_number);
     }
 
-    function show_detail_page($job) {
+    function show_detail_page($job,$training_list) {
         $smarty = new MySmarty();
         $smarty->assign('job', $job);
+        $smarty->assign('training_list',$training_list);
         @$smarty->display(JOB_DETAIL_TPL);
     }
 
@@ -54,14 +58,11 @@
                 $question[choices] = json_decode($question[choices]);
             }
         }
-        #获得training的list
-        $training_list = get_training_list_api($job_id);
         
         $smarty = new MySmarty();
         $smarty->assign('training', $training);
         $smarty->assign('training_number', $training_number);
         $smarty->assign('question_list', $question_list);
-        $smarty->assign('training_list',$training_list);
         @$smarty->display(JOB_TRAINING_TPL);
     }
 	
