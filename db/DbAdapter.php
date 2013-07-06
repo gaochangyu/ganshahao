@@ -519,7 +519,7 @@ class DbAdapter {
         return $this->getVar($sql);
     }
 
-    public function select_job_applications_by_company_id($id) {
+    public function select_job_application_list_by_job_id($id) {
         $id = $this->escape($id);
         $sql = "SELECT distinct
                     user.id        as user_id,
@@ -531,11 +531,13 @@ class DbAdapter {
                 FROM
                     job_application, job, user
                 WHERE
-                    job_application.job_id = job.id
+                    job.id ={$id}
+                        AND
+                    job.id = job_application.job_id
                         AND
                     job_application.user_id = user.id
                         AND
-                    job.company_id = {$id}";
+                    user.id = job_application.user_id";
         return $this->getData($sql);
     }
 

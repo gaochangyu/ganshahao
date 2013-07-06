@@ -13,7 +13,10 @@
     <div style="float:left; ">{$company.name}</div>
     </div>
     <div class="container" style="padding-top:40px;">
-		{foreach $job_applications as $job_application}
+    {foreach $job_applications as $job_list}
+    <div class="job_list" style="float:left margin_left:50px">
+    <h2>{$job_list.name}</h2>
+		{foreach $job_list.application_list as $job_application}
         <div class="companycon">
         	<input type="hidden" class="job_application_id" value="{$job_application.id}" />
             <a href="/user/info.php?user_id={$job_application.user_id}"><span style="font-weight:bold;">{$job_application.user_name}</span></a> 申请了 <a href="/job/job_detail.php?job_id={$job_application.job_id}"><span style="font-weight:bold;">{$job_application.job_name}</span></a>
@@ -24,6 +27,8 @@
 			</select></div>
         </div>
         {/foreach}
+        </div>
+    {/foreach}
     </div>
     {include file="common/footer.tpl"}
     <script>

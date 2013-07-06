@@ -68,5 +68,34 @@
                     training_completed.training_id = training.id 
                 GROUP By
                     training.id";
+        //print_r($_db->getData($sql));
+        
+        $id = 2;
+        $sql = "SELECT
+                    id, name
+                FROM
+                    job
+                WHERE
+                    company_id = {$id}";
+        //print_r($_db->getData($sql));
+        
+        $id = 3;
+        $sql = "SELECT distinct
+                    user.id        as user_id,
+                    user.nick_name as user_name,
+                    job.id         as job_id,
+                    job.name       as job_name,
+					job_application.id,
+					job_application.status
+                FROM
+                    job_application, job, user
+                WHERE
+                    job.id ={$id}
+                        AND
+                    job.id = job_application.job_id
+                        AND
+                    job_application.user_id = user.id
+                        AND
+                    user.id = job_application.user_id";
         print_r($_db->getData($sql));
 ?>
