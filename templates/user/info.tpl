@@ -26,7 +26,7 @@
                         <li class="field">
                             <label class="settingstitle">头像</label>
                             <div class="row">
-                                <img alt="Default-user-icon" src="/uploads/{$user.picture}">
+                                <img alt="Default-user-icon" width="150px" height="150px" src="/uploads/{$user.picture}">
                             </div>
                         </li>
                         <li class="field">
