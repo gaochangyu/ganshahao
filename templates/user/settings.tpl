@@ -3,7 +3,7 @@
     <head>
     <meta charset="utf-8">
     <title>更新个人设置</title>
-    <link rel="stylesheet" rev="stylesheet" href="/static/CSS/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" rev="stylesheet" href="/static/css/main.css" type="text/css" media="all" />
 	<link rel="icon" type="/image/ico" href="favicon.ico">    
     </head>
     <body id="user-settings">

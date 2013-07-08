@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>个人简介</title>
     <link rel="stylesheet" href="/static/css/common.css" type="text/css" />
-    <link rel="stylesheet" rev="stylesheet" href="/static/CSS/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" rev="stylesheet" href="/static/css/main.css" type="text/css" media="all" />
 	<link rel="icon" type="/image/ico" href="favicon.ico">
     </head>
     <body id="profile">

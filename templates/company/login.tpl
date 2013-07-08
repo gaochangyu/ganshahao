@@ -3,7 +3,7 @@
 <head>
     <title>[干啥好] 企业登录页面</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" rev="stylesheet" href="/static/CSS/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" rev="stylesheet" href="/static/css/main.css" type="text/css" media="all" />
 	<link rel="icon" type="/image/ico" href="favicon.ico">    
 </head>
 
