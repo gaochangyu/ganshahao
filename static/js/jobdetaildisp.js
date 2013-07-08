@@ -1,7 +1,7 @@
 // JavaScript Document
 function jobdetaildisp(){  
         	    var nextbut= document.getElementById("next_training_btn");
-				var jobdesc= document.getElementById("jobdescription"); 
+				var traininglist= document.getElementById("tabs"); 
 				nextbut.style.display="inline";
-				jobdesc.style.display="none";
+				traininglist.style.display="inline";
 				}

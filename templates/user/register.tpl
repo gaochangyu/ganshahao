@@ -11,7 +11,7 @@
 	<div class="headerimg"></div>
     {include file="common/header.tpl"}
     	<div class="container" style="padding-top:40px;">
-        	<div class="loginbox" style="z-index:2; top:50px;">
+        	<div class="loginbox" style="z-index:2; top:30px; height:360px;">
                     <div style="width:90%; padding:00px 5% 50px 5%;">
                         <div class="title24" style="font-size:28px; line-height:60px; height:60px; color:#999; text-align:center;">用户注册</div>
                             <fieldset style="border:none; padding:0; margin:0;">

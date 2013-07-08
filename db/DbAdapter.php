@@ -524,6 +524,7 @@ class DbAdapter {
         $sql = "SELECT distinct
                     user.id        as user_id,
                     user.nick_name as user_name,
+					user.picture   as user_picture,
                     job.id         as job_id,
                     job.name       as job_name,
 					job_application.id,

@@ -27,7 +27,7 @@
 </div>
 <div class="rightcol">
     <div class="latest">
-		<div class="latesttitle">我的工作申请</div>
+		<div class="latesttitle">我的工作申请</div><div id="latestcon">
 			{foreach $application_list as $application}
             <div class="latestblock">
             	<div class="latestcon">
@@ -53,6 +53,7 @@
                 </div>
 			</div>
             {/foreach}
+            </div>
 		<div style="clear:both; height:30px;"></div>
 	</div>
     
@@ -73,7 +74,13 @@
 </div>
 </section>
 
-        {include file="common/footer.tpl"}
-        <script src="/static/js/application_list.js"></script>
-    </body>
+{include file="common/footer.tpl"}
+<script src="/static/js/application_list.js"></script>
+<script>
+var content = document.getElementById("latestcon");
+if (content.innerHTML==null || content.innerHTML=="" || content.innerHTML==0){
+	content.innerHTML="<div class='showblank'>暂时没有工作申请</div>";
+}
+</script>
+</body>
 </html>

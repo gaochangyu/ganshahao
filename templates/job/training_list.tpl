@@ -1,13 +1,15 @@
-<div style="height:10px;"></div>
-<div class="trainingprogblock">
-    		<div class="trainingprogcon0" style="background:#aaa; color:#fff;">
-    			本职位的培训列表
-    		</div>
-</div>
+<div class="outer-center">
+<div class="inner-center">
 {foreach $training_list as $training}
-        <div class="trainingprogblock">
+        	<li>
     		<div class="trainingprogcon0">
-    			{$training.name}
+    			{$training.training_order}
     		</div>
-    	</div>
+            <div class="trainingprogtitle">
+            	{$training.name}
+            </div>
+    		</li>
 {/foreach}
+</div>
+</div>
+<div class="clear"></div>

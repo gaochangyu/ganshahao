@@ -4,7 +4,8 @@
         $('#next_training_btn').hide();
     </script>
 {else}
-    <div class="jobtraining" id="trainingcontent" style="max-height:500px; overflow:auto; width:100%; padding:0 0 0 0;">
+    <div class="jobtraining" id="trainingcontent" style="overflow:visible; width:100%; padding:0 0 20px 0;">
+    <div class="leftcol" style="width:48%; max-height:500px; overflow:visible; padding:0 0 0 0;">    
     <div id="training-description">
         <input type="hidden" id="training_id" name="training_id" value="{$training.id}" />
         <input type="hidden" id="training_name" name="training_name" value="{$training.name}" />
@@ -25,6 +26,8 @@
         <div class="bottom1"></div>
     </div>
     </div>
+    
+    <div class="rightcol" style="width:48%; overflow:visible;">
     <div id="training-question">
     	{foreach $question_list as $question}
         <div class="trainingcon">
@@ -34,7 +37,7 @@
             	
                 {foreach $question.choices as $choice}
             	<li>
-                	<span class="input"></span><input onclick="selectOne(this)" class="checkbox" type="checkbox" name="{$question.id}" id="{$question.id}{$choice@iteration}" value="{$choice@iteration}"/><span class="input"></span><label for="{$question.id}{$choice@iteration}" id="{$question.id}{$choice@iteration}">{$choice}</label>
+                	<span class="input"></span><input onclick="selectOne(this)" class="checkbox" type="checkbox" name="{$question.id}" id="{$question.id}{$choice@iteration}" value="{$choice@iteration}"/><span class="input"></span><label for="{$question.id}{$choice@iteration}" id="{$question.id}{$choice@iteration}" style="width:437px; height:24px; font-size:14px; line-height:24px;" >{$choice}</label>
                 </li>
                 {/foreach}
             </div>

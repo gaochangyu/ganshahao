@@ -139,6 +139,7 @@ function redo_training() {
     $("#training_result_div").hide();
     scores_map.clear();
     get_training();
+	initTab()
 }
 
 function get_next_training() {
@@ -288,7 +289,7 @@ function get_training_list() {
         dataType: "text",
         timeout:120000, // 2min
         success: function (text) {
-            $("#training_list").html(text);
+            $("#tabs").html(text);
         },
     });
 }
