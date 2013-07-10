@@ -23,7 +23,7 @@
         <input class="jobinfobut" id="apply_btn" name="apply_btn" type="button" value="现在申请" onclick="jobdetaildisp()" />
         </div>
         <div style="position:relative; float:right; width:64%; height:100%; padding:10px 2% 10px 0;">
-        	<div id="jobdescription" style="display:inline"><div class="jobinfo">{$job.job_description}</div></div>
+        	<div id="jobdescription" style="display:inline"><div class="jobinfo">{$job.job_description nofilter}</div></div>
         </div>
         <div id="tabs" class="traininglistblock" style="display:none;">
         <div class="outer-center">

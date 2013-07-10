@@ -40,7 +40,7 @@
 </div>
 <div class="rightcol">
 	<div class="jobinfo">
-    	<div id="jobdescription" style="display:inline">{$job.job_description}</div>
+    	<div id="jobdescription" style="display:inline">{$job.job_description nofilter}</div>
         <div id="training_content"></div>
         <div id="no_training_div" class="notification" style="display:none">
         	该职位没有提供相关培训

@@ -44,13 +44,13 @@
             console.log("in");
             $(".status_selected").change(function() {
                 console.log($(this).val());
-                console.log($(this).parents().siblings(".job_application_id").val());
+                console.log($(this).siblings(".job_application_id").val());
                 $.ajax({
                     type:"POST",
                     url :"/company/change_status.php",
                     data:   {
                         'status_selected'  : $(this).val(),
-                        'job_application_id'  : $(this).parents().siblings(".job_application_id").val(),
+                        'job_application_id'  : $(this).siblings(".job_application_id").val(),
                     },
                     dataType: "json",
                     timeout:120000, // 2min

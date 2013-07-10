@@ -1,9 +1,9 @@
 <?php
 define('TEMPLATE_PATH', dirname(__FILE__) . '/../templates/');
-//define('TEMPLATE_C_PATH', dirname(__FILE__) . '/../templates_c/');
+define('TEMPLATE_C_PATH', dirname(__FILE__) . '/../templates_c/');
 
 //For SAE
-define('TEMPLATE_C_PATH', 'saemc://smartytpl/');
+//define('TEMPLATE_C_PATH', 'saemc://smartytpl/');
 
 //db
 define("ERR_SERVER_DB",                     501);
