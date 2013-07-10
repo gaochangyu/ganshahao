@@ -528,7 +528,8 @@ class DbAdapter {
                     job.id         as job_id,
                     job.name       as job_name,
 					job_application.id,
-					job_application.status
+					job_application.status,
+                    job_application.score
                 FROM
                     job_application, job, user
                 WHERE

@@ -106,11 +106,15 @@ function catch_score() {
 
 function save_scores() {
     var keys = scores_map.keys();
+    var sum = 0;
     for (var index in keys) {
         var key = keys[index];
         var obj = scores_map.get(key);
         save_score(key, obj.score);
+        sum = sum + obj.score;
     }
+
+    return sum
 }
 function save_score(training_id, training_score) {
     /* toast('您获得了: '+score+" 分");
@@ -172,7 +176,7 @@ function get_training() {
 }
 
 function save_job_apply() {
-    save_scores();
+    var sum = save_scores();
     var job_id = $("#job_id").val();
     $.ajax({
         type :	"POST",
@@ -180,6 +184,7 @@ function save_job_apply() {
         url  :	"/job/save_job_apply.php",
         data :   {
             job_id : job_id,
+            score  : sum,
         },
         dataType: "json",
         timeout:120000, // 2min
